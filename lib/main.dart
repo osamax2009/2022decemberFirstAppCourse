@@ -39,7 +39,16 @@ class HomePage extends StatelessWidget {
           Icon(Icons.arrow_back)
 
         ],
+        flexibleSpace: Image(
+          image:NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/255px-Flag_of_Iraq.svg.png"),
+          fit: BoxFit.fill,
+        ),
+
+
+
       ) ,
+
+      body: Text(" this the body ")
     );
   }
 }
