@@ -28,9 +28,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar() ,
-      body: Text("hello world"),
+      appBar:AppBar(
+        title: Text("First App"),
+        leading: Icon(Icons.star),
+        actions: [
+          Icon(Icons.arrow_forward),
+          Icon(Icons.circle),
+          Icon(Icons.arrow_back),
+          Icon(Icons.arrow_back),
+          Icon(Icons.arrow_back)
 
+        ],
+      ) ,
     );
   }
 }
