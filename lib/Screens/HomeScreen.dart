@@ -17,19 +17,26 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          height: 300,
-          width: 300,
-          //
+          alignment: Alignment.center,
+          height: 400,
+          width: 400,
+          margin: EdgeInsets.all(20),
+          padding: EdgeInsets.all(20),
           decoration:BoxDecoration(
             color: Colors.yellow,
             border: Border.all(
-              width: 5,
-              color: Colors.orange
+              width: 10,
+              color: Colors.pink
             ),
             borderRadius: BorderRadius.circular(10)
 
           ) ,
-          child: Text("am Container ")
+          child: Text("am Container ",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.green
+            ),
+          )
         ),
       ),
 
