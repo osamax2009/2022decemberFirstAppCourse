@@ -1,57 +1,24 @@
-
-
 import 'package:flutter/material.dart';
+
+import 'Screens/HomeScreen.dart';
 
 
 void main(){
-  runApp(FirstApp());
+  runApp(MyApp());
 }
 
 
 
-class FirstApp extends StatelessWidget {
-  const FirstApp({Key? key}) : super(key: key);
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: HomeScreen() ,
     );
   }
 }
-
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar:AppBar(
-        title: Text("First App"),
-        leading: Icon(Icons.star),
-        actions: [
-          Icon(Icons.arrow_forward),
-          Icon(Icons.circle),
-          Icon(Icons.arrow_back),
-          Icon(Icons.arrow_back),
-          Icon(Icons.arrow_back)
-
-        ],
-        flexibleSpace: Image(
-          image:NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/255px-Flag_of_Iraq.svg.png"),
-          fit: BoxFit.fill,
-        ),
-
-
-
-      ) ,
-
-      body: Text(" this the body ")
-    );
-  }
-}
-
 
 
