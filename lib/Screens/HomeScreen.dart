@@ -15,16 +15,21 @@ class HomeScreen extends StatelessWidget {
         title: Text("my First app"),
 
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.black,
-                Colors.red
-              ]
-          ),
+      body: Center(
+        child: Container(
+          height: 300,
+          width: 300,
+          //
+          decoration:BoxDecoration(
+            color: Colors.yellow,
+            border: Border.all(
+              width: 5,
+              color: Colors.orange
+            ),
+            borderRadius: BorderRadius.circular(10)
+
+          ) ,
+          child: Text("am Container ")
         ),
       ),
 
