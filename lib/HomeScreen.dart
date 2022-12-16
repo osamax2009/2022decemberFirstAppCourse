@@ -16,16 +16,20 @@ class HomeScreen extends StatelessWidget {
       ),
 
       floatingActionButton: FloatingActionButton(
-          onPressed: (){},
+          onPressed: (){
+            print("ok");
+          },
         child: Icon(Icons.favorite),
-        
+
 
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
+        notchMargin: 5,
+        color: Colors.orange,
         child: Container(
-          color: Colors.orange,
+
           height: 50,
         ),
       ),
