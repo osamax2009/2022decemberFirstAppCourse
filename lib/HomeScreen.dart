@@ -11,8 +11,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
 
+      body:Container(
+        color: Colors.white70,
+      ),
 
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+        child: Icon(Icons.favorite),
+        
+
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
         child: Container(
           color: Colors.orange,
           height: 50,
