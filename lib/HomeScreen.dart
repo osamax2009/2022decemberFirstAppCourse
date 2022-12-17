@@ -9,7 +9,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+      ),
+      drawer: Drawer(),
 
       body:Container(
         color: Colors.white70,
@@ -18,6 +20,9 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           onPressed: (){
             print("ok");
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("تم الحفظ"))
+            );
           },
         child: Icon(Icons.favorite),
 
