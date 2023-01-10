@@ -1,4 +1,4 @@
-import 'mycomponents/homepage.dart';
+import 'mycomponents/FlagScreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.orange
         ) ,
         debugShowCheckedModeBanner: false,
-        home:const HomePage(),
+        home:const FlagPage(),
     );
   }
 }
