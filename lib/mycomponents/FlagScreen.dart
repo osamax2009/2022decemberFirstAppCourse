@@ -1,22 +1,37 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
-
-class FlagPage extends StatelessWidget {
+class FlagPage extends StatefulWidget {
    FlagPage({Key? key}) : super(key: key);
 
+  @override
+  State<FlagPage> createState() => _FlagPageState();
+}
 
+class _FlagPageState extends State<FlagPage> {
   var myflagList = [
     "assets/img/Bahrain.png",
     "assets/img/iraq.png",
-    "assets/img/oman.png",
+    "assets/img/oman.jpg",
     "assets/img/uae.jpg"
   ];
 
   int count = 0 ;
 
         void increaseCount(){
-          count++;
-          print ("count $count");
+          // if (count < myflagList.length -1 ) {
+          //   setState(() {
+          //     count++;
+          //   });
+          // }else {
+          //   count = 0 ;
+          // }
+          // print ("count $count");
+          Random r = Random();
+          setState(() {
+            count  =  r.nextInt(myflagList.length -1);
+          });
+
         }
 
   @override
