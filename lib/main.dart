@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.orange
         ) ,
         debugShowCheckedModeBanner: false,
-        home:const FlagPage(),
+        home: FlagPage(),
     );
   }
 }

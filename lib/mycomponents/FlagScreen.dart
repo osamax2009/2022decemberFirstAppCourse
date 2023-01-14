@@ -2,7 +2,22 @@ import 'package:flutter/material.dart';
 
 
 class FlagPage extends StatelessWidget {
-  const FlagPage({Key? key}) : super(key: key);
+   FlagPage({Key? key}) : super(key: key);
+
+
+  var myflagList = [
+    "assets/img/Bahrain.png",
+    "assets/img/iraq.png",
+    "assets/img/oman.png",
+    "assets/img/uae.jpg"
+  ];
+
+  int count = 0 ;
+
+        void increaseCount(){
+          count++;
+          print ("count $count");
+        }
 
   @override
   Widget build(BuildContext context) {
@@ -10,14 +25,37 @@ class FlagPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Flag Screen"),
       ),
-      body:Container(
-          child:
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween ,
+        children: [
           Container(
-            margin: EdgeInsets.all(20),
-            child: Image(
-              image:NetworkImage("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/1599px-Flag_of_Iraq.svg.png?20221130134748") ,
-            ),
+              child:
+              Container(
+                margin: EdgeInsets.all(20),
+                child:  Image(
+                  image:  AssetImage (myflagList[count]) ,
+                ),
+              ),
           ),
+          Container(
+              decoration:BoxDecoration(
+                color: Colors.orange,
+              ) ,
+              margin: EdgeInsets.all(20),
+              width: double.infinity,
+              height: 60,
+              child: ElevatedButton(
+                  style:ElevatedButton.styleFrom(
+                    backgroundColor:  Colors.orange,
+                  ) ,
+                  onPressed: increaseCount
+
+                  , child: Text("press me ")
+              )
+          )
+
+
+        ],
       ) ,
     );
   }
